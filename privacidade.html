@@ -26,10 +26,9 @@
     <p>A ferramenta acessa somente a conta Google e o canal do YouTube do próprio Lucro Fantasma, depois que o
       dono do canal autoriza o acesso na tela de consentimento do Google. Ela pede estas permissões:</p>
     <ul>
-      <li><code>youtube.upload</code> e <code>youtube</code>: enviar os vídeos do canal e gerenciar os vídeos do canal;</li>
-      <li><code>youtube.force-ssl</code>: as mesmas operações por conexão segura;</li>
-      <li><code>youtubepartner</code> e <code>youtubepartner-channel-audit</code>: pedidas pelo conector do YouTube
-        do n8n; a ferramenta não usa recursos de parceiro.</li>
+      <li><code>youtube.upload</code>: enviar os vídeos do canal;</li>
+      <li><code>youtube.force-ssl</code>: gerenciar os vídeos do próprio canal (miniatura, privacidade e data de
+        publicação), sempre por conexão segura.</li>
     </ul>
     <p>Com essas permissões, a ferramenta apenas: envia vídeos do canal como privados; define a miniatura
       escolhida pela equipe; lê e altera o status de privacidade e a data de publicação dos vídeos do próprio
@@ -87,10 +86,9 @@
         <a href="https://www.google.com/policies/privacy">Google Privacy Policy</a> also applies.</p>
       <h3>Data we access</h3>
       <p>The tool accesses only the Google account and YouTube channel of Lucro Fantasma itself, after the channel
-        owner grants access on Google's consent screen. It requests the scopes <code>youtube.upload</code>,
-        <code>youtube</code>, <code>youtube.force-ssl</code>, <code>youtubepartner</code> and
-        <code>youtubepartner-channel-audit</code> (the last two are requested by n8n's YouTube connector and are not
-        used). With them, the tool only uploads the channel's videos as private, sets the thumbnail chosen by the
+        owner grants access on Google's consent screen. It requests only two scopes: <code>youtube.upload</code>
+        (to upload the channel's videos) and <code>youtube.force-ssl</code> (to manage the channel's own videos over a
+        secure connection). With them, the tool only uploads the channel's videos as private, sets the thumbnail chosen by the
         team, and reads and updates the privacy status and publishing date of the channel's own videos. It does
         not read or collect data about viewers, subscribers, comments, messages or financial information.</p>
       <h3>How we store and use data</h3>

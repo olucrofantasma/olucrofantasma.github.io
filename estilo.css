@@ -1,0 +1,72 @@
+/* Site do Lucro Fantasma: papel de livro-razão, tinta preta e vermelho de carimbo. */
+@font-face { font-family: Zilla; src: url(fontes/zilla-slab-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: Zilla; src: url(fontes/zilla-slab-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: PlexCond; src: url(fontes/ibm-plex-sans-condensed-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: PlexCond; src: url(fontes/ibm-plex-sans-condensed-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: PlexMono; src: url(fontes/ibm-plex-mono-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+
+:root {
+  --papel: #eee7d5;
+  --folha: #f6f1e3;
+  --tinta: #16181d;
+  --vermelho: #b5121b;
+  --pauta: rgba(127, 155, 182, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--papel) repeating-linear-gradient(to bottom, transparent 0 45px, var(--pauta) 45px 46px);
+  color: var(--tinta);
+  font: 400 19px/1.6 PlexCond, "Arial Narrow", Arial, sans-serif;
+}
+
+.folha {
+  max-width: 780px;
+  margin: 40px auto;
+  padding: 40px 48px 48px;
+  background: var(--folha);
+  border-left: 4px double rgba(181, 18, 27, 0.55);
+  box-shadow: 0 14px 34px rgba(40, 30, 10, 0.18);
+}
+
+.marca {
+  font: 600 14px/1 PlexMono, monospace;
+  letter-spacing: 3px;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h1, h2 { font-family: Zilla, Georgia, serif; line-height: 1.1; }
+h1 { font-size: 52px; margin: 18px 0 8px; }
+h2 { font-size: 28px; margin: 34px 0 6px; border-bottom: 2px solid var(--tinta); padding-bottom: 4px; }
+h3 { font-size: 20px; margin: 22px 0 4px; }
+
+a { color: var(--vermelho); }
+.subtitulo { font-size: 22px; margin-top: 0; }
+.nota { font-size: 15px; opacity: 0.75; }
+
+nav { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 22px; font: 600 15px/1.4 PlexMono, monospace; }
+
+.carimbo {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 12px;
+  border: 3px solid var(--vermelho);
+  color: var(--vermelho);
+  font: 600 14px/1.4 PlexMono, monospace;
+  letter-spacing: 2px;
+  transform: rotate(-3deg);
+}
+
+hr { border: 0; border-top: 2px dashed var(--tinta); margin: 44px 0 10px; }
+code { font: 600 15px PlexMono, monospace; overflow-wrap: anywhere; }
+
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .folha { margin: 0; padding: 28px 16px 36px; border-left: 0; }
+  h1 { font-size: 38px; }
+  h2 { font-size: 24px; }
+}
